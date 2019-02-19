@@ -17,16 +17,18 @@ String Calculator<br>
   .Remember to solve things as simply as possible so that you force yourself to write tests you did not think about<br>
   .Remember to refactor after each passing test
 
- 
+
 <li>.Allow the Add method to handle an unknown amount of numbers</li>
 
 <li>.Allow the Add method to handle new lines between numbers (instead of commas).</li>
   .the following input is ok:  “1\n2,3”  (will equal 6)<br>
   .the following input is NOT ok:  “1,\n” (not need to prove it - just clarifying)
-  
+
 <li>.Support different delimiters</li>
   .to change a delimiter, the beginning of the string will contain a separate line that looks like this:   “//[delimiter]\n[numbers…]” for example “//;\n1;2” should return three where the default delimiter is ‘;’ .<br>
   .the first line is optional. all existing scenarios should still be supported
-  
+
 <li>.Calling Add with a negative number will throw an exception “negatives not allowed” - and the negative that was passed.if there are multiple negatives, show all of them in the exception message</li>
+<li>Numbers bigger than 1000 should be ignored, so adding 2 + 1001  = 2</li>
+<li>Delimiters can be of any length with the following format:  “//[delimiter]\n” for example: “//[***]\n1***2***3” should return 6<li>
 </ol>
