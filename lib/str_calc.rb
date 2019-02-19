@@ -5,4 +5,5 @@ class StringCalculator
     numbers = str.split(',').map! { |number| number.to_i }
     return numbers.inject(:+)
   end
+
 end
