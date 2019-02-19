@@ -8,6 +8,7 @@ class StringCalculator
     array_checker(numbers)
   end
 
+  private
   def delimiter(str)
     str[0..1] == '//' ? (del = delimiter_modifier(str)) : (del = ',')
     del
