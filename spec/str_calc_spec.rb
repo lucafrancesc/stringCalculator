@@ -12,7 +12,7 @@ describe StringCalculator do
     it 'returns the sum of the number in the string passed' do
       expect(calc.add('1')).to eq 1
     end
-
+    
     it 'returns the sum of the number in the string passed' do
       expect(calc.add('-1')).to eq 'negative not allowed'
     end
@@ -31,6 +31,10 @@ describe StringCalculator do
 
     it 'changes the delimiter' do
       expect(calc.add("//;\n2;3;4")).to eq 9
+    end
+
+    it 'does not take number greater than 1000' do
+      expect(calc.add("1\n2000,32")).to eq 33
     end
 
   end
