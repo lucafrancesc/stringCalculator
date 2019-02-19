@@ -13,3 +13,8 @@ class StringCalculator
     del
   end
 end
+
+# str = 'asd'
+# if str == 'asd'
+#   raise 'cazzo'
+# end
