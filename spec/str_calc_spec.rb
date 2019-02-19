@@ -25,5 +25,9 @@ describe StringCalculator do
       expect(calc.add("1,\n2,3")).to eq '-,\n- is not a valid syntax'
     end
 
+    it 'changes the delimiter' do
+      expect(calc.add("//;\n2;3;4")).to eq 9
+    end
+
   end
 end
