@@ -10,25 +10,21 @@ class StringCalculator
 
   def delimiter(str)
     del = ','
-    return del if str[0..1] != '//'
-    if str[0..1] == '//'
-      if (str[2] == '[') && (/]/.match(str))
-         del = str[str.index('[')+1..str.index(']')-1]
-       else
-         del = str[2]
-       end
-    end
+    str[0..1] == '//' ?del = delimiter_modifier(str) : del
     return del
+  end
+
+  def delimiter_modifier(str)
+    if (str[2] == '[') && (/]/.match(str))
+       return str[str.index('[')+1..str.index(']')-1]
+     else
+       return str[2]
+     end
   end
 
   def array_checker(numbers)
     under_1000 = []
-    numbers.each do |number|
-        under_1000.push(number) if number < 1000
-    end
+    numbers.each { |number| under_1000.push(number) if number < 1000 }
     return under_1000.inject(:+)
   end
 end
-
-# x = StringCalculator.new
-# p x.delimiter("//[;a!]\n2;a!3;a!4")
