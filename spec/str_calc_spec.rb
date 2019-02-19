@@ -21,5 +21,9 @@ describe StringCalculator do
       expect(calc.add("1\n2,3")).to eq 6
     end
 
+    it 'manages breaks' do
+      expect(calc.add("1,\n2,3")).to eq '-,\n- is not a valid syntax'
+    end
+
   end
 end
