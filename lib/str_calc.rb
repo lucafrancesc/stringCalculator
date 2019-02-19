@@ -9,17 +9,12 @@ class StringCalculator
   end
 
   def delimiter(str)
-    del = ','
-    str[0..1] == '//' ?del = delimiter_modifier(str) : del
+    str[0..1] == '//' ? (del = delimiter_modifier(str)) : (del = ',')
     return del
   end
 
   def delimiter_modifier(str)
-    if (str[2] == '[') && (/]/.match(str))
-       return str[str.index('[')+1..str.index(']')-1]
-     else
-       return str[2]
-     end
+    return (str[2] == '[') && (/]/.match(str)) ? str[str.index('[')+1..str.index(']')-1] : str[2]
   end
 
   def array_checker(numbers)
