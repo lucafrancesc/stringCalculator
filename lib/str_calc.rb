@@ -10,8 +10,15 @@ class StringCalculator
 
   def delimiter(str)
     del = ','
-    str[0..1] == '//' ? (del = str[2]) : del
-    del
+    return del if str[0..1] != '//'
+    if str[0..1] == '//'
+      if (str[2] == '[') && (/]/.match(str))
+         del = str[str.index('[')+1..str.index(']')-1]
+       else
+         del = str[2]
+       end
+    end
+    return del
   end
 
   def array_checker(numbers)
@@ -22,3 +29,6 @@ class StringCalculator
     return under_1000.inject(:+)
   end
 end
+
+# x = StringCalculator.new
+# p x.delimiter("//[;a!]\n2;a!3;a!4")
