@@ -12,5 +12,9 @@ describe StringCalculator do
     it 'returns the sum of the number in the string passed' do
       expect(calc.add('1')).to eq 1
     end
+
+    it 'returns the sum of the number in the string passed' do
+      expect(calc.add('1,3,4')).to eq 8
+    end
   end
 end
