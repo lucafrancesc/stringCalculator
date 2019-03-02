@@ -9,6 +9,7 @@ Before you start:<br>
 <li>Run bundle install</li>
 <li>Open the console log and follow the instruction below</li>
 </ul>
+
 ```
 irb
 load 'lib/str_calc.rb'
@@ -16,6 +17,7 @@ calc = StringCalculator.new
 calc.add '1,2,3'
 calc.add 'enter your numbers! :)'
 ```
+
 ![alt text](https://github.com/lucafrancesc/stringCalculator/blob/master/Screenshot.png)
 
 If you want to give it a try all you have to do is following the step below!
