@@ -4,6 +4,22 @@ String Calculator
 The following is a TDD Kata- an exercise in coding, refactoring and test-first, that you should apply daily for at least 15 minutes (I do 30).
 
 Before you start:<br>
+<ul>
+<li>Fork and clone the repository</li>
+<li>Run bundle install</li>
+<li>Open the console log and follow the instruction below</li>
+</ul>
+```
+irb
+load 'lib/str_calc.rb'
+calc = StringCalculator.new
+calc.add '1,2,3'
+calc.add 'enter your numbers! :)'
+```
+![alt text](https://github.com/lucafrancesc/stringCalculator/blob/master/Screenshot.png)
+
+If you want to give it a try all you have to do is following the step below!
+
 Try not to read ahead.<br>
 Do one task at a time. The trick is to learn to work incrementally.<br>
 Make sure you only test for correct inputs. there is no need to test for invalid inputs for this kata<br>
